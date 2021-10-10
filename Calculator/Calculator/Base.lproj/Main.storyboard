@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EvK-af-7g1">
+                                <rect key="frame" x="44" y="0.0" width="838" height="407"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvb-vK-5mK">
+                                        <rect key="frame" x="0.0" y="0.0" width="838" height="134.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 1 = 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-04-EYW">
+                                                <rect key="frame" x="660.66666666666663" y="64.333333333333329" width="167.33333333333337" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BuM-04-EYW" secondAttribute="trailing" constant="10" id="7K8-WD-u6m"/>
+                                            <constraint firstAttribute="bottom" secondItem="BuM-04-EYW" secondAttribute="bottom" constant="10" id="eiq-KT-IqY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCX-7w-Qfm">
+                                        <rect key="frame" x="0.0" y="134.33333333333334" width="838" height="272.66666666666663"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-TQ-cDh">
+                                                <rect key="frame" x="0.0" y="0.0" width="838" height="272.66666666666669"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-W9-Aqk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="838" height="53.666666666666664"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-fF-tw7" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="(">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAF-IN-RT3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h64-ga-GBj" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="84" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title=")">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdo-gB-aig"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J16-1b-Dlm" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="mc">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBS-W2-27W"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avA-tV-hYF" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="251.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="m+">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B6t-2d-0Im"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-7I-OKy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="335.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="m-">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CWM-bc-QUN"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8b-qX-kXL" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="419.66666666666669" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="mr">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bu1-rb-5AU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-zL-ALV" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="503.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="AC">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ssg-6h-pvM"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZx-4D-WU2" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="587.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="+/-">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvP-nw-izt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-og-oY9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="671.33333333333337" y="0.0" width="82.666666666666629" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="%">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNF-QD-Vfx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ju-YY-R47" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="755" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="➕">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTH-KZ-sKB"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <mask key="subviews">
+                                                                <include reference="YCt-zL-ALV"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rcL-hn-drR">
+                                                        <rect key="frame" x="0.0" y="54.666666666666657" width="838" height="53.666666666666657"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWU-uK-ZiQ" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="2nd">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="changeToAnotherMod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VW8-2t-lm1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-NM-hRh" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="84" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="x²">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvu-K5-iE1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcb-D7-m0v" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="x³">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ms-oY-1c5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP7-DU-HwH" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="251.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="xʸ">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puK-RU-7G0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5w-02-iN5" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="335.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="eˣ">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3mb-sA-yEz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-7U-fHP" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="419.66666666666669" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="10ˣ">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bid-er-NKC"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9N-YJ-gJU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="503.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Glo-7u-UJd"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTu-mv-kYs" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="587.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4g5-Ly-x55"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-7e-jRn" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="671.33333333333337" y="0.0" width="82.666666666666629" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2h-Qm-nhl"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebK-gj-qPG" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="755" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                                <state key="normal" title="✖️">
+                                                                    <color key="titleColor" red="0.97764068839999996" green="0.92018777129999996" blue="0.83871960639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y9H-Vw-4Y0"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TiS-Vu-I9d">
+                                                        <rect key="frame" x="0.0" y="109.33333333333331" width="838" height="54"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62C-Gp-tcU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="1/x">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JxA-wE-EI3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azb-Dh-JTn" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="84" y="0.0" width="82.666666666666686" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="√x">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSe-BW-h4y"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzz-gB-Puv" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="∛x">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzo-St-Lw0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-3c-Zo6" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="251.66666666666669" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="ʸ√x">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQO-sR-atJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-VL-o3G" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="335.66666666666669" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="ln">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUN-8t-S68"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNj-7e-cS3" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="419.66666666666669" y="0.0" width="82.666666666666686" height="54"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="log₁₀">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iR3-SO-GKw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEm-O7-BNq" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="503.33333333333337" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUY-rG-7Pj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJP-fM-tFB" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="587.33333333333337" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ne3-AC-bNz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qud-Mq-bCs" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="671.33333333333337" y="0.0" width="82.666666666666629" height="54"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFv-eL-2y8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ap-6F-Dol" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="755" y="0.0" width="83" height="54"/>
+                                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                                <state key="normal" title="➖">
+                                                                    <color key="titleColor" red="0.97764068839999996" green="0.92018777129999996" blue="0.83871960639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FK4-oz-FDA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-bN-v9X">
+                                                        <rect key="frame" x="0.0" y="164.33333333333334" width="838" height="53.666666666666657"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOD-rD-4b9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="x!">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u25-bb-O0w"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxE-A9-0kU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="84" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="sin">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBx-S4-Q13"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcU-Ly-nm4" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="167.66666666666666" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="cos">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l3i-n9-ZQv"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crd-fx-xCy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="251.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="tan">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1w6-a7-Cu3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-CJ-Woy" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="335.66666666666669" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="e">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHP-CX-ODy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THh-os-xzd" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="419.66666666666669" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="EE">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mPD-uI-ohn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXJ-EC-jH9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="503.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icb-gB-tkU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-Jg-AoU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="587.33333333333337" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBl-sm-ugw"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16r-cb-FZi" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="671.33333333333337" y="0.0" width="82.666666666666629" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nde-9L-u2y"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gws-4z-diA" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="755" y="0.0" width="83" height="53.666666666666664"/>
+                                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                                <state key="normal" title="➕">
+                                                                    <color key="titleColor" red="0.7999380827" green="0.80003482100000001" blue="0.79990512130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vh7-oq-JGM"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-di-oqF">
+                                                        <rect key="frame" x="0.0" y="218.99999999999997" width="838" height="53.666666666666657"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-g4-8eV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="502.33333333333331" height="53.666666666666664"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmU-fG-ls5" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                        <state key="normal" title="Rad">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBF-Bl-h65"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qA-8E-fuc" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="84" y="0.0" width="82.666666666666686" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                        <state key="normal" title="sinh">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRS-Yd-ZnB"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB8-ps-MAJ" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="167.66666666666666" y="0.0" width="83" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                        <state key="normal" title="cosh">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mpr-SL-zpG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-Xb-iEk" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="251.66666666666666" y="0.0" width="82.666666666666657" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                        <state key="normal" title="tanh">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tih-4N-Sez"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-EI-OHd" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="335.33333333333331" y="0.0" width="83" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                        <state key="normal" title="π">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xf5-X6-Ygx"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-Oc-bKx" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="419.33333333333331" y="0.0" width="83" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                        <state key="normal" title="Rand">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrl-YD-94t"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OnY-6y-5R3">
+                                                                <rect key="frame" x="503.33333333333337" y="0.0" width="334.66666666666663" height="53.666666666666664"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIj-MS-9X4" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="166.33333333333334" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                        <state key="normal" title="0">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1j-bZ-mJR"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbv-fg-fVh" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="167.33333333333326" y="0.0" width="83" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" red="0.403888315" green="0.40394026039999997" blue="0.40387064220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                                        <state key="normal" title=".">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numbertouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWf-cq-dmR"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asd-ci-BmH" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="251.33333333333329" y="0.0" width="83.333333333333343" height="53.666666666666664"/>
+                                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                                        <state key="normal" title="＝">
+                                                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="operatortouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3c-Bg-pAP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="asd-ci-BmH" firstAttribute="width" secondItem="Kbv-fg-fVh" secondAttribute="width" id="YRU-G7-eYs"/>
+                                                                    <constraint firstItem="Kbv-fg-fVh" firstAttribute="width" secondItem="EIj-MS-9X4" secondAttribute="width" multiplier="0.5" id="pVJ-gD-62y"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="OnY-6y-5R3" firstAttribute="width" secondItem="Ix2-g4-8eV" secondAttribute="width" multiplier="0.666667" id="xEG-pt-0nP"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UAU-TQ-cDh" secondAttribute="bottom" id="9E0-CB-a8E"/>
+                                            <constraint firstItem="UAU-TQ-cDh" firstAttribute="leading" secondItem="VCX-7w-Qfm" secondAttribute="leading" id="Kxs-up-Lig"/>
+                                            <constraint firstAttribute="trailing" secondItem="UAU-TQ-cDh" secondAttribute="trailing" id="t7H-77-4Md"/>
+                                            <constraint firstItem="UAU-TQ-cDh" firstAttribute="top" secondItem="VCX-7w-Qfm" secondAttribute="top" id="vMy-7Y-Ahg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mvb-vK-5mK" firstAttribute="height" secondItem="EvK-af-7g1" secondAttribute="height" multiplier="0.33" id="WCC-F4-bj4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EvK-af-7g1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8yw-rl-Iaw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EvK-af-7g1" secondAttribute="trailing" id="D8T-tI-Ocu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EvK-af-7g1" secondAttribute="bottom" id="FtU-R2-aqw"/>
+                            <constraint firstItem="EvK-af-7g1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I4K-Mi-hhO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cos_1" destination="vcU-Ly-nm4" id="Cmc-7b-VFq"/>
+                        <outlet property="cosh_1" destination="aB8-ps-MAJ" id="Zz3-1L-AXx"/>
+                        <outlet property="displayLabel" destination="BuM-04-EYW" id="F11-0r-UFc"/>
+                        <outlet property="e_To_y" destination="o5w-02-iN5" id="TXz-Sy-D85"/>
+                        <outlet property="ln_to_logy" destination="hHP-VL-o3G" id="eSR-gT-V68"/>
+                        <outlet property="sin_1" destination="IxE-A9-0kU" id="98g-QY-rVs"/>
+                        <outlet property="sinh_1" destination="5qA-8E-fuc" id="ccr-Pd-ULh"/>
+                        <outlet property="tan_1" destination="Crd-fx-xCy" id="gW3-y1-oKX"/>
+                        <outlet property="tanh_1" destination="1CF-Xb-iEk" id="snt-zU-vY0"/>
+                        <outlet property="ten_to_two" destination="NbG-7U-fHP" id="ecR-wN-Z47"/>
+                        <outlet property="theClearButton" destination="YCt-zL-ALV" id="XKU-eB-nTF"/>
+                        <outlet property="to_log2" destination="DNj-7e-cS3" id="qt7-jz-hwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.439252336448597" y="74.514038876889856"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="16r-cb-FZi">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="1CF-Xb-iEk">
+            <size key="intrinsicContentSize" width="48" height="42"/>
+        </designable>
+        <designable name="1ma-Jg-AoU">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="5qA-8E-fuc">
+            <size key="intrinsicContentSize" width="45" height="42"/>
+        </designable>
+        <designable name="62C-Gp-tcU">
+            <size key="intrinsicContentSize" width="31" height="42"/>
+        </designable>
+        <designable name="6Ju-YY-R47">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="8Ap-6F-Dol">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="A9N-YJ-gJU">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="BZx-4D-WU2">
+            <size key="intrinsicContentSize" width="34" height="42"/>
+        </designable>
+        <designable name="Crd-fx-xCy">
+            <size key="intrinsicContentSize" width="35" height="42"/>
+        </designable>
+        <designable name="DNj-7e-cS3">
+            <size key="intrinsicContentSize" width="48" height="42"/>
+        </designable>
+        <designable name="EIj-MS-9X4">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="EQA-NM-hRh">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="FEm-O7-BNq">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="Gws-4z-diA">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="Hcb-D7-m0v">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="I8b-qX-kXL">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="IxE-A9-0kU">
+            <size key="intrinsicContentSize" width="31" height="42"/>
+        </designable>
+        <designable name="J16-1b-Dlm">
+            <size key="intrinsicContentSize" width="34" height="42"/>
+        </designable>
+        <designable name="Kbv-fg-fVh">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="NTu-mv-kYs">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="NbG-7U-fHP">
+            <size key="intrinsicContentSize" width="33" height="42"/>
+        </designable>
+        <designable name="SP7-DU-HwH">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="Sga-3c-Zo6">
+            <size key="intrinsicContentSize" width="34" height="42"/>
+        </designable>
+        <designable name="THh-os-xzd">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="Te3-CJ-Woy">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="Vzz-gB-Puv">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="XJP-fM-tFB">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="YCt-zL-ALV">
+            <size key="intrinsicContentSize" width="33" height="42"/>
+        </designable>
+        <designable name="aB8-ps-MAJ">
+            <size key="intrinsicContentSize" width="53" height="42"/>
+        </designable>
+        <designable name="asd-ci-BmH">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="avA-tV-hYF">
+            <size key="intrinsicContentSize" width="36" height="42"/>
+        </designable>
+        <designable name="azb-Dh-JTn">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="dyx-fF-tw7">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="ebK-gj-qPG">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="f4n-EI-OHd">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="g1g-7I-OKy">
+            <size key="intrinsicContentSize" width="32" height="42"/>
+        </designable>
+        <designable name="h64-ga-GBj">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="h6u-Oc-bKx">
+            <size key="intrinsicContentSize" width="56" height="42"/>
+        </designable>
+        <designable name="hHP-VL-o3G">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="hXJ-EC-jH9">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="kWU-uK-ZiQ">
+            <size key="intrinsicContentSize" width="43" height="42"/>
+        </designable>
+        <designable name="nnh-7e-jRn">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="o5w-02-iN5">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="qcd-og-oY9">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="qud-Mq-bCs">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="tOD-rD-4b9">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="vcU-Ly-nm4">
+            <size key="intrinsicContentSize" width="39" height="42"/>
+        </designable>
+        <designable name="zmU-fG-ls5">
+            <size key="intrinsicContentSize" width="43" height="42"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
