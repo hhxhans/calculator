@@ -24,8 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var sinh_1: MyButton!
     @IBOutlet weak var cosh_1: MyButton!
     @IBOutlet weak var tanh_1: MyButton!
-    
+    @IBOutlet weak var Rad: MyButton!
     //
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,13 +77,19 @@ class ViewController: UIViewController {
     
     
     var inTypingMode = false
-    
+    var has_dot:Bool = false
     //隐式可选类型解析
     @IBAction func numbertouched(_ sender: MyButton) {
         print("Number \(String(describing: sender.currentTitle!)) is touched!")
         
-        if inTypingMode || sender.currentTitle == "."{
-            digitOnDisplay = digitOnDisplay + sender.currentTitle!
+        if inTypingMode || (sender.currentTitle == "." && !has_dot){
+            
+            if (sender.currentTitle == "." && !has_dot){
+                has_dot = true
+                inTypingMode = true
+                digitOnDisplay = digitOnDisplay + sender.currentTitle!
+            }
+            if sender.currentTitle != "."{digitOnDisplay = digitOnDisplay + sender.currentTitle!}
         }
         else{
             digitOnDisplay = sender.currentTitle!
@@ -96,10 +103,24 @@ class ViewController: UIViewController {
     @IBAction func operatortouched(_ sender: MyButton) {
         
         print("Operator \(String(describing: sender.currentTitle!)) is touched!")
-        if sender.currentTitle == "C"{theClearButton.setTitle("AC", for: UIControl.State.normal)}
+        if(sender.currentTitle == "Rad"){
+            sender.setTitle("Deg", for: .normal)
+        }
+        else if(sender.currentTitle == "Deg"){
+            sender.setTitle("Rad", for: .normal)
+        }
+        if sender.currentTitle == "="{has_dot = false}
+        if sender.currentTitle == "C"{
+            theClearButton.setTitle("AC", for: UIControl.State.normal)
+            has_dot = false
+            Rad.setTitle("Rad", for: .normal)
+        }
         else if sender.currentTitle != "AC" && theClearButton.currentTitle != "C"
-        {theClearButton.setTitle("C", for: UIControl.State.normal)}
-        
+        {
+            theClearButton.setTitle("C", for: UIControl.State.normal)
+            has_dot = false
+            
+        }
         if let op = sender.currentTitle{
             if(digitOnDisplay == "NAN" || digitOnDisplay == "inf"){digitOnDisplay = String(0)}
             else if let result = calculator.performOperation(operation: op, operand: Double(digitOnDisplay)!){
@@ -107,7 +128,6 @@ class ViewController: UIViewController {
                 if(result == Double(Int.min)){digitOnDisplay = "NAN"}
                 else{
                     let tmp = String(round(1e13*result)/1e13)
-                    
                     let res = Double(tmp)
                     if res! < 1E18 && Double(Int(result)) == result{  digitOnDisplay = String(Int(res!)) }
                     else{ digitOnDisplay = String(res!) }}

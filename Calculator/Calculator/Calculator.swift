@@ -13,6 +13,7 @@ var is_Rad:Bool = true
 func getFactorIal(num: Int) -> Int {
     var sum = 1
     if(num == 0){return 1}
+    if(num>20){return Int.min}
     for i in 1...num {
         sum *= i
     }
@@ -65,7 +66,7 @@ class Calculator: NSObject {
             return pow(Double(10),op)
         },
         "yˣ":Operation.BinaryOp{ op1, op2 in
-            return pow(op1,op2)
+            return pow(op2,op1)
         },
         "2ˣ":Operation.UnaryOp{ op in
             return pow(2,op)
@@ -168,6 +169,11 @@ class Calculator: NSObject {
         },
         
         "Rad":Operation.UnaryOp{ op in
+            is_Rad = !is_Rad
+            print(is_Rad)
+            return op
+        },
+        "Deg":Operation.UnaryOp{ op in
             is_Rad = !is_Rad
             print(is_Rad)
             return op
