@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cosh_1: MyButton!
     @IBOutlet weak var tanh_1: MyButton!
     @IBOutlet weak var Rad: MyButton!
-    //
+    //change
     
     
     override func viewDidLoad() {
